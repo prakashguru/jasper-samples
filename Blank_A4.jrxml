@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7418c10a-13c8-4cf6-8c43-1d91eff8cf1f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LocalData"/>
+	<parameter name="From" class="java.util.Date">
+		<defaultValueExpression><![CDATA[2017-01-01]]></defaultValueExpression>
+	</parameter>
+	<parameter name="To" class="java.util.Date">
+		<defaultValueExpression><![CDATA[2017-12-01]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="month" class="java.sql.Date">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="month"/>
+		<fieldDescription><![CDATA[month]]></fieldDescription>
+	</field>
+	<field name="center" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="center"/>
+		<fieldDescription><![CDATA[center]]></fieldDescription>
+	</field>
+	<field name="delivery" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="delivery"/>
+		<fieldDescription><![CDATA[delivery]]></fieldDescription>
+	</field>
+	<sortField name="month"/>
+	<filterExpression><![CDATA[$F{center}.equals( "chennai")]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<textField>
+				<reportElement x="434" y="39" width="171" height="21" uuid="af8b97c2-9b55-448a-a246-b890f9907ea0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[DATEFORMAT($P{From},"MMM, yyyy")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="0" width="241" height="21" uuid="ccb81972-fc25-42b0-8513-5031c94e1410"/>
+				<textElement markup="none">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Mobile Obestrics Monitoring]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="10" width="233" height="21" uuid="dd578c28-b00b-4c1b-a720-797c51d248ee"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[All Health Centers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="38" width="71" height="22" uuid="5f8203e3-7c68-44d4-ad8f-5c3b0c9cb29d"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="434" y="58" width="171" height="21" uuid="126c17d1-3128-4017-8157-e3126a4dcfd8"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[DATEFORMAT($P{To},"MMM, yyyy")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="363" y="57" width="71" height="22" uuid="b3250468-335e-4ec7-86f3-a6e42a5d9863"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To     :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="512" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="11" width="601" height="5" uuid="2ab4bb15-6dec-492e-97c9-09a6401ce2f2"/>
+			</line>
+			<line>
+				<reportElement x="-20" y="51" width="601" height="5" uuid="e182c06f-320f-4abd-9020-67c8df37a435"/>
+			</line>
+			<staticText>
+				<reportElement x="-10" y="20" width="241" height="21" uuid="ab30054c-a85c-4bd2-b1e0-75d0a8146447"/>
+				<textElement markup="none">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[All Deliveries]]></text>
+			</staticText>
+			<xyBarChart>
+				<chart evaluationTime="Report">
+					<reportElement x="19" y="98" width="541" height="414" uuid="a3a363cd-919a-4656-a5ca-3132ddd381ab"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<xyDataset>
+					<xySeries>
+						<seriesExpression><![CDATA[$F{delivery}]]></seriesExpression>
+						<xValueExpression><![CDATA[INTEGER_VALUE(DATEFORMAT($F{month},"yyyyMM"))]]></xValueExpression>
+						<yValueExpression><![CDATA[SUM($F{delivery})]]></yValueExpression>
+					</xySeries>
+				</xyDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</xyBarChart>
+		</band>
+	</detail>
+</jasperReport>

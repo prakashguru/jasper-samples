@@ -1,0 +1,122 @@
+[
+  {
+    "month": "2017-1-1",
+    "center": "bengalore",
+    "delivery": 4
+  },
+  {
+    "month": "2017-1-1",
+    "center": "chennai",
+    "delivery": 2
+  },
+  {
+    "month": "2017-2-1",
+    "center": "bengalore",
+    "delivery": 5
+  },
+  {
+    "month": "2017-2-1",
+    "center": "chennai",
+    "delivery": 6
+  },
+  {
+    "month": "2017-3-1",
+    "center": "bengalore",
+    "delivery": 1
+  },
+  {
+    "month": "2017-3-1",
+    "center": "chennai",
+    "delivery": 0
+  },
+  {
+    "month": "2017-4-1",
+    "center": "bengalore",
+    "delivery": 2
+  },
+  {
+    "month": "2017-4-1",
+    "center": "chennai",
+    "delivery": 4
+  },
+  {
+    "month": "2017-5-1",
+    "center": "bengalore",
+    "delivery": 0
+  },
+  {
+    "month": "2017-5-1",
+    "center": "chennai",
+    "delivery": 2
+  },
+  {
+    "month": "2017-6-1",
+    "center": "bengalore",
+    "delivery": 5
+  },
+  {
+    "month": "2017-6-1",
+    "center": "chennai",
+    "delivery": 8
+  },
+  {
+    "month": "2017-7-1",
+    "center": "bengalore",
+    "delivery": 7
+  },
+  {
+    "month": "2017-7-1",
+    "center": "chennai",
+    "delivery": 6
+  },
+  {
+    "month": "2017-8-1",
+    "center": "bengalore",
+    "delivery": 1
+  },
+  {
+    "month": "2017-8-1",
+    "center": "chennai",
+    "delivery": 1
+  },
+  {
+    "month": "2017-9-1",
+    "center": "bengalore",
+    "delivery": 0
+  },
+  {
+    "month": "2017-9-1",
+    "center": "chennai",
+    "delivery": 0
+  },
+  {
+    "month": "2017-10-1",
+    "center": "bengalore",
+    "delivery": 0
+  },
+  {
+    "month": "2017-10-1",
+    "center": "chennai",
+    "delivery": 1
+  },
+  {
+    "month": "2017-11-1",
+    "center": "bengalore",
+    "delivery": 2
+  },
+  {
+    "month": "2017-11-1",
+    "center": "chennai",
+    "delivery": 3
+  },
+  {
+    "month": "2017-12-1",
+    "center": "bengalore",
+    "delivery": 1
+  },
+  {
+    "month": "2017-12-1",
+    "center": "chennai",
+    "delivery": 3
+  }
+]
